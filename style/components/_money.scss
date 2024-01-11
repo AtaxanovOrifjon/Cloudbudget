@@ -1,0 +1,79 @@
+.money {
+    background-color: $primary;
+    padding-block: 94px;
+    
+    
+
+    &-content {
+        gap: 30px;
+        
+        &_info {
+            max-width: 445px;
+            width: 100%;
+        
+        }
+        &_swiper {
+            max-width: 530px;
+            width: 100%;
+            position: relative;
+
+        }
+
+        
+    }
+
+    .money-info {
+        
+        &_title {
+            @include title;
+            color: $light;
+        }
+        &_text {
+            color:$light;
+            text-align: justify;
+            font-family:$LR;
+            font-size:$sm;
+           line-height: 140%;
+            margin-block: 47px 40px;
+           
+        }
+        &_link {
+            display: flex;
+            width: 134px;
+            justify-content: center;
+            align-items: center;
+            gap: 23px;
+         
+        }
+    }
+
+   .money-swiper{
+       height: 311px;
+       &_img {
+        position: absolute;
+      }
+   }
+
+   .first-img {
+    z-index: 3;
+    top: 0;
+    left:44px ;
+    max-width: 445px;
+   }
+   .second-img {
+    z-index: 2;
+    top: 22px;
+    opacity: 0.5;
+    width: 383px;
+
+   }
+   .third-img {
+       z-index: 2;
+       top: 22px;
+       right: 0;
+       opacity: 0.5;
+       width: 383px;
+   }
+   
+   
+}

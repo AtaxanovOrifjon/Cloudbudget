@@ -1,0 +1,53 @@
+.technology {
+    padding-block: 63px 104px;
+
+    &-title {
+        @include title;
+        text-align: center;
+        margin-bottom: 64px;
+    }
+    
+    &-content {
+        @include flexBetween;
+        gap: 30px;
+    }
+    .technology-card {
+        width: 255px;
+        padding: 20px 32px;
+        text-align: center;
+
+        &_info {
+            width: 117px;
+            height: 120px;
+            position: relative;
+            margin: 0 auto;
+
+            &-num {
+                color: rgba(16, 16, 16, 0.08);
+                text-align: center;
+                font-family:$LB;
+                font-size: 100px;
+            }
+            &-img {
+                position: absolute;
+                left: 50%;
+                bottom: -8px;
+                transform: translateX(-50%);
+            }
+        }
+
+        &_title {
+            color:$dark;
+            font-family:$LB;
+            font-size:$md;
+            margin-block: 14px 10px;
+        }
+
+        &_text {
+            color: #000;
+            font-family:$LR;
+            font-size:$xs;
+        
+        }
+    }
+}

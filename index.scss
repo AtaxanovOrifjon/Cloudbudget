@@ -1,0 +1,16 @@
+@import "./style/fonts/fonts";
+@import "./style/variable/root";
+@import "./style/mixins/media";
+@import "./style/mixins/mixins";
+@import "./style/settings/settings";
+
+
+// Compontes
+@import "./style/components/header";
+@import "./style/components/banner";
+@import "./style/components/managment";
+@import "./style/components/features";
+@import "./style/components/technology";
+@import "./style/components/money";
+@import "./style/components/contact";
+@import "./style/components/footer";

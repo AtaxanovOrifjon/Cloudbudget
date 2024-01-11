@@ -1,0 +1,100 @@
+.managment{
+    width: 100%;
+    padding-block: 94px;
+
+    @include tablet {
+        padding-block: 70px;
+    }
+    @include mobilelg {
+        padding-block: 60px;
+    }
+    @include mobile {
+        padding-block: 40px;
+    }
+
+    &-content {
+        gap: 60px ;
+
+        &_info {
+            max-width:445px;
+            width:100%;
+        }
+        @media (max-width:900px) {
+            flex-direction: column;
+        }
+       @include mobileLg {
+        gap: 45px;
+       }
+        @include mobile {
+            gap: 30px;
+        }
+    }
+    .content-info {
+       
+        &-title {
+            @include title;
+           margin-bottom: 42px; 
+           @include tablet {
+            margin-bottom: 30px;
+           }
+           @include mobile {
+            margin-bottom: 20px;
+           }
+        }
+        &_text {
+            color:$dark;
+            text-align: justify;
+            font-family:$LR;
+            font-size: $sm;
+            line-height: 140%;
+            padding-block: 20px;  
+        }
+        &_link {
+            color:$primary;
+            text-align: justify;
+            font-family:$LR;
+            font-size:$sm;
+            line-height: 140%; 
+            margin-bottom: 0;
+        }
+    }
+
+    &-media{
+        max-width: 445px;
+        width: 100%;
+        position: relative;
+         
+
+        &_img {
+            width: 100%;
+            display:block;
+        }
+
+        &_link {
+            position: absolute;
+            top: 50%;
+            left:-10%;
+            width: 63px;
+            height: 63px;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background-color: $primary ;
+            padding: 24px;
+
+            @media (max-width:900px) {
+               left: 50%;
+               transform: translate(-50%,-50%); 
+            }
+            @include mobile {
+                width: 50px;
+                height: 50px;
+                padding: 17px;
+            }
+
+        }
+    }
+}
+
+    
+    
+ 

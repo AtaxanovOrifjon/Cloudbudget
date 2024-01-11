@@ -1,0 +1,107 @@
+.contact {
+    padding-block: 117px 78px;
+
+    &-content {
+        gap: 30px;
+        align-items: start;
+
+        
+        &_info {
+            max-width: 445px;
+            width: 100%;
+        }
+    }
+    &-info {
+       &_title {
+        @include title;
+        margin-bottom: 56px;
+       }
+       &_text {
+        color:$dark;
+        text-align: justify;
+        font-family:$LR;
+        font-size:$sm;
+       line-height: 140%; 
+       }
+    }
+    &-form {
+        max-width: 540px;
+        width: 100%;
+        @include flexCenter;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        row-gap: 24px;
+
+        &_input {
+            border-radius: 6px;
+            border: 1px solid var(--Gray-1, #333);
+            padding: 20px 30px;
+
+            &::placeholder {
+                color: rgba(19, 39, 67, 0.50);
+                font-family:$LR;
+                font-size: 16px; 
+            }
+        }
+
+        &_submit {
+            padding: 17px 34px;
+            background-color:$primary;
+            border-radius: 6px;
+            color:$light;
+            font-family:$LR;
+            font-size:$sm;
+            text-transform: uppercase;
+            transition: $transiion;
+            border: 1px solid $primary;
+
+            &:hover {
+                background-color: $light;
+                color: $primary;
+                cursor: pointer;
+            }
+        }
+
+
+        &_select {
+            border-radius: 6px;
+            border: 1px solid var(--Gray-1, #333);
+           
+            width: 100%;
+
+            &-select {
+                width: 100%;
+            }
+        }
+    }
+    .form-select {
+        position: relative;
+        &::after {
+            content: url(../../img/icon/ChevronDown\(E70D\).svg);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 26px;
+        }
+       &_select {
+        width: 100%;
+        padding: 20px 30px;
+        border-radius: 6px;
+        border: none;
+        --webkit-appearance:  none;
+        --moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+        color: rgba(19, 39, 67, 0.50);
+        font-family:$LR;
+        font-size: 16px;
+
+       } 
+    }
+    .sm {
+       width: 255px; 
+    }
+    .lg {
+        width: 100%;
+    }
+}

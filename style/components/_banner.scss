@@ -1,0 +1,123 @@
+.banner {
+    background-image: url(../../img/11.png);
+    background-size: cover;
+    height: 782px;
+    width: 100%;
+    position:relative;
+    top: 0;
+    @include flexCenter;
+    justify-content: center;
+    z-index: 2;
+
+    @include tablet {
+        height: 700px;
+    }
+    @include mobilelg {
+        height: 600px;
+    }  
+    @include mobile {
+        height: 500px;
+    } 
+    @include mobileSm {
+        height: 400px;
+    } 
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(213, 32, 71, 0.80) 0%, rgba(238, 61, 27, 0.80) 100%);
+    }
+
+    &-info {
+        max-width: 578px;
+        width: 100%;
+        position: relative;
+        z-index: 5;
+        margin: 0 auto;
+        text-align: center;
+        @include flexCenter;
+        flex-direction: column;
+        gap: 39px;
+
+        @include tablet {
+            gap: 30px;
+        }
+        @include mobilelg {
+            gap: 20px;
+        }
+        @include mobile {
+            gap: 15px;
+        }
+        @include mobileSm {
+             margin-top: 20px;
+        }
+
+        &_title {
+            color:$light;
+            font-family:$LB;
+            font-size: 72px;
+            letter-spacing: 3.6px;
+            text-transform: uppercase;
+
+            @include tablet {
+                font-size: 60px;
+            }
+            @include mobilelg {
+                font-size: 50px;
+            }
+            @include mobile {
+               font-size: 40px; 
+            }
+            @include mobileSm {
+               font-size: 30px; 
+            }
+        }
+
+        &_text {
+            max-width: 540px;
+            height: 124px;
+            flex-shrink: 0;
+            color:$light;
+            text-align: center;
+            font-family:$LB;
+            font-size: $lg;
+            line-height: 150%;  
+            @include mobilelg {
+                font-size: $md;
+            }
+            @include mobileSm {
+                font-size:$sm;
+            }
+        }
+        &_btn {
+            padding: 16px 52px;
+            color: $primary;
+            font-family:$LB;
+            font-size:$sm;
+            text-transform: uppercase;
+            border-radius: 6px;
+            background:$light;
+            transition: $transiion;
+
+            &:hover {
+                cursor: pointer;
+              scale: 1.1;
+            }
+            @include mobilelg {
+                padding: 14px 45px;
+            }
+            @include mobile {
+                padding:14px 40px ;
+            }
+            @include mobileSm {
+                padding: 12px 30px;
+            }
+        }
+    }
+   
+}
